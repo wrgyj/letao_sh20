@@ -76,7 +76,7 @@ $('#form').on('success.form.bv',function(e){
     success:function(info){
       console.log(info);
       if(info.success){
-        location.href='index1.html';
+        location.href='index.html';
       }
       if(info.error === 1001){
         // 将密码框, 校验状态改成 错误状态 INVALID
