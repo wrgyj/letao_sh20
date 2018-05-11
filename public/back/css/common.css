@@ -1,6 +1,9 @@
 .bg_color{
   background-color: #222D32;
 }
+.mb_20 {
+  margin-bottom: 20px;
+}
 .mt_150{
   margin-top:150px;
 }
