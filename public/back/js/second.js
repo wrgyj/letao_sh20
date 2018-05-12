@@ -142,37 +142,28 @@ $(function(){
   
   
   // 6. 注册表单校验成功事件, 阻止默认提交, 通过 ajax 进行提交
-  $('#form').on("success.form.bv", function( e ) {
-    // 阻止默认的表单提交
+  $('#form').on('success.form.bv',function(e){
     e.preventDefault();
     
-    console.log($('#form').serialize());
-    
     $.ajax({
-      type: "post",
-      url: "/category/addSecondCategory",
-      data: $('#form').serialize(),
-      success: function( info ) {
-        console.log( info );
-        if ( info.success ) {
-          // 添加二级分类成功
+      type:'post',
+      url:'/category/addSecondCategory',
+      data:$('#form').serialize(),
+      success:function(info){
+        if(info.success){
           // 隐藏模态框
-          $('#secondModal').modal("hide");
+          $('#secondModal').modal('hide');
           // 重新渲染第一页
           currentPage = 1;
           render();
-          
           // 将表单内容重置 resetForm(true)
-          $('#form').data("bootstrapValidator").resetForm( true );
-          
+          $('#form').data('bootstrapValidator').resetForm(true);
           // 将文本重置
-          $('#dropdownText').text("请选择一级分类");
-          
+          $('#dropdownText').text('请选择一级分类');
           // 将图片重置
-          $('#imgBox img').attr("src", "./images/none.png");
+          $('#imgBox img').attr('src','images/none.png');
         }
       }
     })
   })
-  
 })
