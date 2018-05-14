@@ -99,3 +99,20 @@ img {
 .lt_footer li a.current p {
   color: orange;
 }
+
+
+/*lt_product公共头部*/
+.lt_search {
+  padding: 10px;
+  position: relative;
+}
+.lt_search input{
+  height: 34px;
+  font-size: 12px;
+}
+.lt_search button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 0 5px 5px 0;
+}
